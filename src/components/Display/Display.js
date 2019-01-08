@@ -33,12 +33,11 @@ class Display extends Component {
 
 export const mapStateToProps = (state) => ({
     houses: state.houses,
-    isLoading: state.isLoading,
-    error: state.error
+    isLoading: state.isLoading
 });
 
 export const mapDispatchToProps = (dispatch) => ({
   getHousesThunk: () => dispatch(getHousesThunk())
-})
+});
 
 export default connect(mapStateToProps, mapDispatchToProps)(Display);
